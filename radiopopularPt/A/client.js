@@ -290,10 +290,6 @@ window.swogo.ui.setPage("payment", function (parameters) {
 var pdpPage = window.swogo.ui.getPage("pdp");
 pdpPage.extractSKUs(function getSkus (){
     var ids = [];
-    var skuContainer = document.querySelector('#bt-comprar a');
-
-    if (skuContainer)
-        ids.push(document.querySelector('#bt-comprar a').href.match(/id=(\d+)/i)[1]);
     
     return ids;
 });
