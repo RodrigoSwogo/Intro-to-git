@@ -290,6 +290,8 @@ window.swogo.ui.setPage("payment", function (parameters) {
 var pdpPage = window.swogo.ui.getPage("pdp");
 pdpPage.extractSKUs(function getSkus (){
     var ids = [];
+
+    ids.push(window.location.href.match(/idprod=(\d+)/i)[1]);
     
     return ids;
 });
@@ -298,7 +300,7 @@ pdpPage.addBundle("pdp", pdpBundle);
 var basketPage = window.swogo.ui.getPage("basket");
 basketPage.extractSKUs(function getSkus(){
     var ids = [];
-
+        
     return ids;
 });
 basketPage.setProductsData(function getProducts(){
