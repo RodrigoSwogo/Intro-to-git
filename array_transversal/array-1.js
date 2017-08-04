@@ -69,3 +69,34 @@ console.log(
     })
 );
 // ############### //
+
+
+// add elements on page
+var html = '<ul class="my-list">' +
+    '<li data-id="56">Apple</li>' +
+    '<li data-id="79">Tomato</li>' +
+    '<li data-id="13">Banana</li>' +
+    '<li data-id="55">Pineapple</li>' +
+    '<li data-id="10">Orange</li>' +
+    '<li data-id="89">Coconut</li>' +
+    '<li data-id="75">Mango</li>' +
+    '<li data-id="47">Watermellon</li>' +
+'</ul>';
+
+document.body.insertAdjacentHTML('beforeend', html);
+
+var listPoints = document.querySelectorAll('.my-list li');
+
+// ############### //
+// looping trough a node list
+for (var i = 0; i < listPoints.length; i++) {
+    var single = listPoints[i];
+
+    console.log(single.textContent);
+}
+
+// using forEach
+listPoints.forEach(function (single) {
+    console.log(single.textContent);
+});
+// ############### //
