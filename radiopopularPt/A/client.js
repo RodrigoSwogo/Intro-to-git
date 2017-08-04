@@ -305,25 +305,13 @@ basketPage.extractSKUs(function getSkus(){
 });
 basketPage.setProductsData(function getProducts(){
     var items = [];
-    var products = document.querySelectorAll('.car-rever-linha');
-    var productCount = products.length;
-    for (var i = 0; i < productCount; i++) {
-        var productId = products[i].id.match(/-(\d+)/i)[1];
-        if (productId){
-            var quantity = parseInt(products[i].querySelector('.car-prod-qtd input[type="text"]').value);
-            var title = products[i].querySelector('.car-prod-nome').textContent || null;
-            var price = parseFloat(products[i].querySelector('#total-produto-' + productId)
-                            .textContent.replace('€','').replace('.', '').replace(',', '.'))|| null;
 
-            for (var j=0; j < quantity; j++){
-                items.push({
-                    "id" : productId,
-                    "price" : price ,
-                    "title" : title
-                })
-            }
-        }
-    }
+    // {
+    //     "id" : productId,
+    //     "price" : price ,
+    //     "title" : title
+    // }
+
     return items;
 });
 
