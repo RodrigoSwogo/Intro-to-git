@@ -1,0 +1,25 @@
+/* core styles */
+.swogo-enable {
+    display: block;
+}
+.swogo-invisible,
+.swogo-disable {
+    display: none;
+}
+.swogo-remove {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Notes
+Class for show more btn
+Class for show alternatives
+Class for Hiding bundles
+State classes
+Out of the box responsive support
+Adjustments to facilitate styling
+Show usefull elements
+Keep consistent flow of elements
+Include all elements visible
+Fill all buttons/titles with placeholder text
+*/

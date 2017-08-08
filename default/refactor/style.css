@@ -1,0 +1,324 @@
+/** HIDDEN **/
+.swogo-alternatives-box,
+.swogo-options-box,
+.swogo-sku,
+.swogo-addCart,
+.swogo-accessory .swogo-button-select-alternative,
+.swogo-alternative input.swogo-quantity {
+    display: none;
+}
+/** GENERAL **/
+.swogo-enable {
+    display: block;
+}
+.swogo-invisible,
+.swogo-disable {
+    display: none;
+}
+.swogo-hidden {
+    height: 0;
+    overflow:hidden;
+}
+.swogo-remove {
+    opacity: 0;
+    pointer-events: none;
+}
+.swogo-container.pdp {
+    clear: both;
+}
+.swogo-bundle {
+    position: relative;
+    cursor: default;
+}
+.swogo-main {
+    border:1px solid #444444;
+    position: relative;
+}
+.swogo-host,
+.swogo-accessories-box,
+.swogo-accessory,
+.swogo-alternative,
+.swogo-option {
+    display: inline-block;
+    vertical-align: top;
+    border: 1px solid #cccccc;
+}
+.swogo-host,
+.swogo-accessory,
+.swogo-alternative,
+.swogo-option{
+    width: 19%;
+}
+.swogo-bundle a {
+    color: #84ee55;
+}
+/** HOST **/
+.swogo-host {
+    position: relative;
+    margin: 0 15px 0 0;
+}
+/** ACCESSORIES **/
+.swogo-accessory .swogo-button-add-to-cart {
+    display: none;
+}
+.swogo-accessory {
+    position: relative;
+    margin: 0 15px 0 0;
+}
+.swogo-accessory:before {
+    content: "+";
+    position: absolute;
+    top: 20px;
+    left: -13px;
+}
+.swogo-product-images-container {
+    height: 120px;
+    width: 120px;
+    margin: auto;
+    cursor: pointer;
+    position:relative;
+}
+.swogo-product-image {
+    position: absolute;
+    max-width: 100%;
+    max-height: 100%;
+    opacity: 0;
+}
+.swogo-product-image.swogo-selected {
+    opacity: 1;
+}
+.swogo-title,
+.swogo-button-alternatives,
+.swogo-more-bundles,
+.swogo-alternative .swogo-button-select-alternative {
+    cursor: pointer;
+}
+/** SUMMARY **/
+.swogo-summary {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 20%;
+}
+/** ALTERNATIVES **/
+.swogo-alternatives-box .swogo-button-alternatives,
+.swogo-alternatives-box .swogo-button-add-to-cart {
+    display: none;
+}
+.swogo-alternatives-box {
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #cccccc;
+}
+.swogo-alternative {
+    margin: 0 15px;
+}
+/** CUSTOM **/
+.swogo-more-bundles {
+    border: 1px solid #ee40b7;
+    margin: auto;
+    width: 180px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+}
+.swogo-more-bundles.swogo-action-close:before {
+    content: "Show more bundles";
+}
+.swogo-more-bundles.swogo-action-open:before {
+    content: "Show less bundles";
+}
+.swogo-loader {
+    position: absolute;
+    left:48%;
+    top:50%;
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #3498db;
+    width: 120px;
+    height: 120px;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+}
+
+@media screen and (max-width: 500px) {
+    .swogo-loader {
+        left: 30%;
+    }
+}
+
+@-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+}
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+.swogo-price.swogo-line-throug {
+    color: red;
+    text-decoration: line-through;
+}
+.swogo-save {
+    color: green;
+}
+
+.swogo-bg-layer{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9001;
+    background-color: rgba(16,16,16,0.55);
+}
+
+.swogo-container-popup{
+    position: fixed;
+    z-index: 9002;
+    background: white;
+    left: 20%;
+    width: 60%;
+    height: 275px;
+    top: 20%;
+}
+
+.swogo-container-popup .swogo-bundle,
+.swogo-container-popup .swogo-main{
+    height: 100% !important;
+    border: 0 !important;
+    margin: 0 !important;
+}
+
+.swogo-container-popup .swogo-accessory{
+    margin-top: 40px !important;
+    margin-left: 40px !important;
+}
+
+.swogo-container-popup .swogo-accessory:before{
+    display: none;
+}
+
+.swogo-container-popup .swogo-product-images-container{
+    height: 120px !important;
+    text-align: left;
+    width: 100% !important;
+    left: auto;
+}
+
+.swogo-container-popup  .swogo-product-image {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.swogo-container-popup .swogo-title {
+    width: 100%;
+    font-size: 13px;
+    height: 33px;
+    color: #21638f;
+}
+
+.swogo-container-popup .swogo-price.swogo-line-throug{
+    color: #0e0e0e !important;
+}
+
+.swogo-container-popup .swogo-discount{
+    font-size: 21px;
+    font-weight: bold;
+    margin-left: 20px;
+}
+
+.swogo-container-popup .swogo-price.swogo-line-throug:before{
+    background-size: 100% 15px !important;
+    left: auto !important;
+    width: 40px !important;
+    height: 16px !important;
+}
+
+.swogo-container-popup .swogo-summary{
+    width: 42%;
+    height: 200px;
+    margin: 0;
+    padding: 0;
+    margin-top: 40px !important;
+    padding-left: 10%;
+}
+
+.swogo-container-popup .swogo-summary:before{
+    display: none;
+}
+
+.swogo-container-popup .swogo-buttons-container{
+    text-align: center;
+}
+
+.swogo-container-popup .swogo-button-add-to-cart {
+    display: inline-block;
+    width: 45% !important;
+    margin-right: 10px;
+    float: none;
+}
+
+.swogo-container-popup .swogo-button-add-to-cart:before{
+    content: "Ano prosim" !important;
+    padding-right: 0;
+}
+
+.swogo-container-popup .swogo-button-deny {
+    display: inline-block;
+    width: 45% !important;
+    font-family: Verdana;
+    height: 35px;
+    line-height: 35px;
+    font-size: 15px;
+    cursor: pointer;
+    font-weight: normal;
+    border-radius: 6px;
+    color: #000;
+    background: #f8f8f8;
+    background: -webkit-gradient(linear,left top,left bottom,from(#fff),to(#efefef));
+    background: -webkit-linear-gradient(top,#fff,#efefef);
+    background: -moz-linear-gradient(top,#fff,#efefef);
+    background: -ms-linear-gradient(top,#fff,#efefef);
+    background: -o-linear-gradient(top,#fff,#efefef);
+    border: 1px solid #d2d2d2;
+    text-align: center;
+    float: none;
+}
+
+.swogo-container-popup .swogo-button-deny:hover {
+    background: #efefef;
+    background: -webkit-gradient(linear, left top, left bottom, from(#f8f8f8), to(#efefef));
+    background: -webkit-linear-gradient(top, #f8f8f8, #efefef);
+    background: -moz-linear-gradient(top, #f8f8f8, #efefef);
+    background: -ms-linear-gradient(top, #f8f8f8, #efefef);
+    background: -o-linear-gradient(top, #f8f8f8, #efefef);
+}
+
+.swogo-container-popup .swogo-button-deny:before{
+    content: "Ne, dêkuji";
+}
+
+.swogo-container-popup .swogo-popup-desc{
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.swogo-container-popup .swogo-product-link .swogo-title{
+    width: 100%;
+}
+
+.swogo-container-popup .swogo-more-bundles,
+.swogo-container-popup .swogo-container-title{
+    display: none;
+}
+
+.swogo-hidden-overflow {
+    overflow: hidden;
+}
