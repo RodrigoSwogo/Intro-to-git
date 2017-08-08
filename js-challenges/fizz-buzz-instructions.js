@@ -21,3 +21,18 @@ if the number is divisible by both we print out "FizzBuzz" */
 "FizzBuzz"
 etc...
 */
+
+
+var resp = '';
+for (var i = 1; i <= 100; i++) {
+    resp = '';
+
+    if (!(i % 3)) { 
+        resp += 'Fizz';
+    }
+    if (!(i % 5)) {
+        resp += 'Buzz';
+    }
+
+    console.log(resp === '' ? i : resp);
+}
