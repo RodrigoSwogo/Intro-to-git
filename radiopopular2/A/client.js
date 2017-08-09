@@ -23,6 +23,9 @@ var templates = {
         '</div>' +
         '<div class="swogo-alternatives-box"></div>' +
         '<div class="swogo-options-box"></div>' +
+        '<div class="swogo-summary-bottom">' +
+        '<div class="swogo-summary"></div>' +
+        '</div>' +
         '</div>',
 
         host: '' +
@@ -177,10 +180,10 @@ var pdpBundle = {
     matchingConfig : "pdp",
     loadBundle : function (bundleDomElement,hostIndex,onLoadComplete) {
         var bundlesPageDOMContainer;
-        var target = document.querySelector("#flix-inpage");
+        var target = document.querySelector("#prod-right");
         var bundlesDOMContainer = document.querySelector(".swogo-container-pdp");
         if(target && !bundlesDOMContainer){
-            target.insertAdjacentHTML("beforeBegin", bundleDomElement.innerHTML);
+            target.insertAdjacentHTML("afterend", bundleDomElement.innerHTML);
             bundlesPageDOMContainer = document.querySelector(".swogo-container-pdp");
         }else{
             bundlesPageDOMContainer = bundlesDOMContainer;
@@ -230,7 +233,17 @@ var pdpBundle = {
             pdpBundle.customization.formatPrice(summaryPrice);
             pdpBundle.customization.formatPrice(summaryDiscount);
             pdpBundle.customization.formatPrice(summarySave);
-        }
+
+            var summaryBottom = bundleDomElement.querySelector(".swogo-summary-bottom");
+            var summaryRpp = summaryBottom.querySelector(".swogo-rrp");
+            var summaryPrice = summaryBottom.querySelector(".swogo-price");
+            var summaryDiscount = summaryBottom.querySelector(".swogo-discount");
+            var summarySave = summaryBottom.querySelector(".swogo-save");
+            pdpBundle.customization.formatPrice(summaryRpp);
+            pdpBundle.customization.formatPrice(summaryPrice);
+            pdpBundle.customization.formatPrice(summaryDiscount);
+            pdpBundle.customization.formatPrice(summarySave);
+        }    
     },
     addCart : function(bundleData,bundleDomElement){
         var host = bundleData.host;
@@ -244,15 +257,16 @@ var pdpBundle = {
         sendRequest (products,function redirect () {
             console.log("finish!");
             if (bundleDomElement.querySelector(".swogo-loader")) bundleDomElement.removeChild(bundleDomElement.querySelector(".swogo-loader"));
+            window.location.href= "/carrinho/disponibilidade.php";
         });
 
         function sendRequest (products,callback) {
-            console.log(products);
+            console.log(products[0]);
             if(!callback) callback = function () {};
             var params = {
                 url:"/carrinho/",
                 method:"get",
-                payload: "id="
+                payload: "id="+ products[0].addCart
             };
             window.swogo.tools.ajaxRequest(params,function (){
                 products.shift();

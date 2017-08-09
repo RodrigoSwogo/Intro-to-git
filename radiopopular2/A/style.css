@@ -57,7 +57,7 @@
 /** HOST **/
 .swogo-host {
     position: relative;
-    margin: 0 10px 0 0;
+    margin: 0 10px;
 }
 /** ACCESSORIES **/
 .swogo-accessory .swogo-button-add-to-cart {
@@ -113,7 +113,7 @@
 /** SUMMARY **/
 .swogo-summary {
     position: absolute;
-    right: 0;
+    right: 1%;
     width: 20%;
     top: 55%;
 }
@@ -275,4 +275,69 @@
 }
 .swogo-hidden-overflow {
     overflow: hidden;
+}
+.swogo-summary-bottom .swogo-summary {
+    display: none;
+}
+/** MOBILE **/
+@media screen and (max-width: 1250px) {
+    .swogo-host,
+    .swogo-accessory,
+    .swogo-alternative,
+    .swogo-option {
+        width: 17%;
+    } 
+}
+@media screen and (max-width: 770px) {
+    .swogo-host,
+    .swogo-accessory,
+    .swogo-alternative,
+    .swogo-option {
+        width: 17%;
+    } 
+    .swogo-summary {
+        display: none;
+    }
+    .swogo-summary-bottom .swogo-summary {
+        display: block;
+        border: 0;
+        text-align: right;
+        border-top: 1px solid #CCC;
+        padding: 10px 10px 6px;
+        position: initial;
+        right: initial;
+        width: initial;
+        top: initial;
+    }
+    .swogo-summary .swogo-button-add-to-cart,    
+    .swogo-summary .swogo-price,
+    .swogo-buttons-container {
+        display: inline-block;
+    }
+    .swogo-summary .swogo-button-add-to-cart {
+        width: 100%;
+        padding: 0 35px;
+        bottom: 5px;
+        right: 45%;
+        position: relative;
+    } 
+    .swogo-summary .swogo-price {
+        right: 13%;
+        position: relative;
+    }       
+    .swogo-alternatives-box.swogo-enable {
+        border-bottom: 0px;
+    }
+}
+@media screen and (max-width: 600px) {
+    .swogo-summary .swogo-price {
+        right: 16%;
+        position: relative;
+    }
+    .swogo-button-alternatives.swogo-enable::after{
+        display: none;
+    }
+    .swogo-button-alternatives::after{
+        display: none;
+    }          
 }
