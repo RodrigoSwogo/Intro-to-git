@@ -1,0 +1,278 @@
+/** HIDDEN **/
+.swogo-alternatives-box,
+.swogo-options-box,
+.swogo-sku,
+.swogo-addCart,
+.swogo-accessory .swogo-button-select-alternative,
+.swogo-alternative input.swogo-quantity {
+    display: none;
+}
+/** GENERAL **/
+.swogo-enable {
+    display: block;
+}
+.swogo-invisible,
+.swogo-disable {
+    display: none;
+}
+.swogo-hidden {
+    height: 0;
+    overflow:hidden;
+}
+.swogo-remove {
+    opacity: 0;
+    pointer-events: none;
+}
+.swogo-container-pdp {
+    clear: both;
+}
+.swogo-bundle {
+    position: relative;
+    cursor: default;
+}
+.swogo-main {
+    position: relative;
+    border-top: 1px solid #CCC;
+    text-align: left;
+    padding: 15px 0 5px;
+}
+.swogo-host,
+.swogo-accessories-box,
+.swogo-accessory,
+.swogo-alternative,
+.swogo-option {
+    display: inline-block;
+    vertical-align: top;
+}
+.swogo-host,
+.swogo-accessory,
+.swogo-alternative,
+.swogo-option{
+    width: 19%;
+}
+.swogo-bundle a {
+    color: #4D4D4D;
+    text-decoration: none;
+}
+/** HOST **/
+.swogo-host {
+    position: relative;
+    margin: 0 10px 0 0;
+}
+/** ACCESSORIES **/
+.swogo-accessory .swogo-button-add-to-cart {
+    display: none;
+}
+.swogo-accessory {
+    position: relative;
+    margin: 0 10px 0 10px;
+}
+.swogo-accessory:before {
+    content: "+";
+    position: absolute;
+    top: 30px;
+    left: 0px;
+    color: #404040;
+    font-family: Arial;
+    font-size: 36px;
+    margin-left: -20px;
+}
+.swogo-product-images-container {
+    height: 120px;
+    width: 120px;
+    margin: auto;
+    cursor: pointer;
+    position:relative;
+}
+.swogo-product-image {
+    max-width: 100%;
+    max-height: 100%;
+    opacity: 0;
+}
+.swogo-product-image.swogo-selected {
+    opacity: 1;
+}
+.swogo-title,
+.swogo-button-alternatives,
+.swogo-alternative .swogo-button-select-alternative {
+    cursor: pointer;
+}
+.swogo-title {
+    font-size: 0.813em;
+    color: #4D4D4D;
+    margin: 5px 0 10px;
+    font-weight: bold;
+    height: 32px;
+    overflow: hidden;
+}
+.swogo-price {
+    font-size: 1em;
+    color: #4D4D4D;
+}
+
+/** SUMMARY **/
+.swogo-summary {
+    position: absolute;
+    right: 0;
+    width: 20%;
+    top: 55%;
+}
+.swogo-summary .swogo-price {
+    font-size: 26px;
+    font-weight: bold;
+    margin: 0 0 5px;
+    cursor: default;
+    color: #4D4D4D;
+    text-align: right;
+}
+.swogo-summary .swogo-button-add-to-cart {
+    background: #ED1C24;
+    height: 38px;
+    line-height: 38px;
+    text-align: center;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+}
+.swogo-summary .swogo-button-add-to-cart::before {
+    content: "Comprar »";
+}
+.swogo-button-alternatives {
+    text-align: center;
+    color: #00AEEF;
+    padding: 5px;
+    font-size: 13px;
+    font-weight: bold;
+}
+.swogo-button-alternatives::before,
+.swogo-button-alternatives.swogo-enable::before {
+    content:'Ver alternativas';
+}
+.swogo-button-alternatives::after {
+    content: '';
+    display: inline-block;
+    height: 12px;
+    width: 12px;
+    position: relative;
+    background: url(https://s3-eu-west-1.amazonaws.com/xsellapp.com/DEV/radiopopularPt/css/down-arrow.png) no-repeat;
+    margin-left: 5px;
+    top: 3px;
+}
+.swogo-button-alternatives.swogo-enable {
+    text-align: center;
+    color: #00AEEF;
+    padding: 5px;
+    font-size: 13px;
+    font-weight: bold;
+    border: 1px solid #cccccc;
+    border-bottom: 1px solid white;
+}
+.swogo-button-alternatives.swogo-enable::after {
+    content: '';
+    display: inline-block;
+    height: 12px;
+    width: 12px;
+    position: relative;
+    background: url(https://s3-eu-west-1.amazonaws.com/xsellapp.com/DEV/radiopopularPt/css/up-arrow.png) no-repeat;
+    margin-left: 5px;
+    top: 3px;
+}
+
+/** ALTERNATIVES **/
+.swogo-alternatives-box .swogo-button-alternatives,
+.swogo-alternatives-box .swogo-button-add-to-cart {
+    display: none;
+}
+.swogo-alternatives-box {
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #cccccc;
+    margin-top: -6px;
+}
+.swogo-alternative {
+    margin: 0 15px;
+}
+/** CUSTOM **/
+.swogo-more-bundles {
+    display: none;
+}
+.swogo-loader {
+    position: absolute;
+    left:48%;
+    top:50%;
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #3498db;
+    width: 120px;
+    height: 120px;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+}
+
+@media screen and (max-width: 500px) {
+    .swogo-loader {
+        left: 30%;
+    }
+}
+
+@-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+}
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+.swogo-price.swogo-line-throug {
+    color: red;
+    text-decoration: line-through;
+}
+.swogo-save {
+    color: green;
+}
+.swogo-bg-layer{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9001;
+    background-color: rgba(16,16,16,0.55);
+}
+.swogo-container-title {
+    margin-top: 10px;
+    padding: 3px 10px 2px;
+    position: relative;
+    text-align: left;
+    color: #4D4D4D;
+    font-weight: normal;
+    border-bottom: 3px solid #00AEEF;
+    font-family: 'Exo', sans-serif;
+    text-transform: uppercase;
+    font-size: 0.95em;
+    background: #EBEBEB;
+}
+.swogo-container-title::before {
+    content: "Packs Disponíveis";
+}
+.swogo-button-select-alternative {
+    height: 30px;
+    line-height: 30px;
+    background: #00AEEF;
+    color: white;
+    font-weight: bold;
+    margin: 5px 0 10px;
+    font-size: 13px;
+}
+.swogo-button-select-alternative::before {
+    content:'Selecionar';
+}
+.swogo-alternative.swogo-selected .swogo-button-select-alternative {
+    background: #7c7a7a;
+}
+.swogo-alternative.swogo-selected .swogo-button-select-alternative::before {
+    content: "Selecionado";
+}
+.swogo-hidden-overflow {
+    overflow: hidden;
+}
