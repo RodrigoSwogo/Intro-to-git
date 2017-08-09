@@ -247,11 +247,12 @@ var pdpBundle = {
         });
 
         function sendRequest (products,callback) {
+            console.log(products);
             if(!callback) callback = function () {};
             var params = {
-                url:"/webapp/wcs/stores/servlet/MultiChannelOrderCatalogEntryAdd",
+                url:"/carrinho/",
                 method:"get",
-                payload: "storeId=10259&langId=-11&accessory=MMNL"+products[0].sku+"&catEntryId="+products[0].addCart[1]+"&categoryId="+products[0].addCart[0]+"&quantity="+products[0].quantity+"&callback=jQuery1110003696279902942479_1426068026126"
+                payload: "id="
             };
             window.swogo.tools.ajaxRequest(params,function (){
                 products.shift();
@@ -307,7 +308,7 @@ basketPage.setProductsData(function getProducts(){
             for (var j=0; j < quantity; j++){
                 items.push({
                     "id" : productId,
-                    "price" : price ,
+                    "price" : price,
                     "title" : title
                 })
             }
